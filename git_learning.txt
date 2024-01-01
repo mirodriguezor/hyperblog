@@ -1,0 +1,63 @@
+----------------------------------------------------INFORMACION GENERAL DE GIT ----------------------------------------------------
+Cuando se ejectura el coman "git init" en un directorio suceden varias cosas
+	1. Se crea el espacio STAGING, es un area que funciona en memoria RAM y es donde se van almacenando los cambios. Cuando se
+		ejectuta el comando "git add ." los cambios quedan en el Staging.
+	2. Se crea el REPOSITORIO, es la carpeta .git
+
+
+---------------------------------------------------- COMANDOS LINUX ----------------------------------------------------
+
+
+history --- Para ver el registro de comandos realizados en la consola
+
+!(code) --- Para ejecutar el comando registrado en history con base en el indice, ejemplo:
+	4 - mkdir comandos_linux.txt
+	Al ejecutar !4 ejecutara el comando para crear la carpeta comandos_linux.txt.
+
+
+
+---------------------------------------------------- COMANDOS GIT ----------------------------------------------------
+NOTA IMPORTANTE:
+( Se utiliza guion "-" para letras y doble guion "--" para palabras)
+
+
+'git add .' --- Agrega todos los cambios efectuados en el directorio actual, los deja en un limbo listos
+			para dar git commit -m "Comentario"
+
+'git commit -m "Commit detail"'  --- Subir esos cambios que estaban en el limbo despues del comando "git add ." para que 
+								queden guardados en el repositorio.
+
+'git rm --cached name_file' --- Se ejecuta este comando para revetir el "git add ." ejectutado
+										 con anterioridad inidcando un archivo especifico. Luego de ejecutar		
+										 este comando si se hace commit no se va a tener en cuenta porque se saco del "git add ."
+
+
+'git config --list' --- Trae el listado de la configuracion por defecto de mi Git.
+
+'git config --list --show-origin' --- Muestra el archivo de configuracion
+'git config --global user.name my_name' --- Configurar el nombre de usuario de Git
+'git config --global user.email my_email' --- Configurar el email de Git
+
+'git diff code_commit1 code_commit2' --- Compara dos versiones de commit realizados en Git, para revisar cuales son los codigos
+									   de los commit se ejecuta el comando "git log".
+
+
+'git log --stat' --- Se verifica los commit y los cambios que se han realizado
+
+'git reset code_commit' --- reseteamos todo al commit seleccionado, si el commit es previo al ultimo	
+							  se borraran los commits siguientes a ese sin borrar la informacion.
+
+'git reset --hard code_commit' --- reseteamos todo al ultimo commit borrando todos los cambios efectuados en 
+							  el directorio actual. Borra incluso lo que haya en staging.
+
+'git checkout -- .'  --- Revierte todos los cambios al ultimo commit sin borrar lo que este en staging
+
+'git checkout - .'  --- Revierte todos los cambios al ultimo commit borrando lo que hay en staging incluido
+
+'git checkout code_commit name_file' --- Revierte los cambios al ultimo commit pero del archivo especificado
+										 sin afectar los cambios realizados a los demas archivos.
+										 "NOTA: Esto se hace en caso de querer revertir la version anterior de
+										  		de un archivo particular sin dañar los cambios a otros archivos"
+
+'git reset HEAD' --- Revierte los cambios subidos al staging, los saca de staging pero no los borra del	
+				     directorio, quedan disponibles para seguir modificando.
