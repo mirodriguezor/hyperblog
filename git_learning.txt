@@ -67,3 +67,7 @@ NOTA IMPORTANTE:
 
 git branch -D name_branch --- Delete branch from Git
 
+###Crear llave publica y privada ssh
+ssh-keygen -t rsa -b 4096 -C "mirodriguezor@unal.edu.co"
+
+
