@@ -67,7 +67,21 @@ NOTA IMPORTANTE:
 
 git branch -D name_branch --- Delete branch from Git
 
-###Crear llave publica y privada ssh
-ssh-keygen -t rsa -b 4096 -C "mirodriguezor@unal.edu.co"
+git merge branch_1 branch2 --- Codigo para unir la branch2 a la branch1.
 
 
+
+---------------------------------------------------- SERVIDOR GITHUB ----------------------------------------------------
+
+Crear llave publica y privada ssh:
+	A continuacion el comando que crea la llave publica y privada necesarias para la interacion con Github:
+		ssh-keygen -t rsa -b 4096 -C "mirodriguezor@unal.edu.co"
+
+Agregar el origen remoto de github:
+	git remote add origin git@github.com:mirodriguezor/hyperblog.git
+
+Verificar el remote:
+	git remote
+
+Verificar el origin:
+	git remote -v
