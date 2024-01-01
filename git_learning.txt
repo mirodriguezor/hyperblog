@@ -61,3 +61,9 @@ NOTA IMPORTANTE:
 
 'git reset HEAD' --- Revierte los cambios subidos al staging, los saca de staging pero no los borra del	
 				     directorio, quedan disponibles para seguir modificando.
+
+
+############# BRANCH ################
+
+git branch -D name_branch --- Delete branch from Git
+
