@@ -55,6 +55,8 @@ NOTA IMPORTANTE:
 --'git diff code_commit1 code_commit2' --- Compara dos versiones de commit realizados en Git, para revisar cuales son los codigos
 									   de los commit se ejecuta el comando "git log".
 
+--'git diff'  --- Enlista los cambios realizados.
+
 
 --'git log --stat' --- Se verifica los commit y los cambios que se han realizado
 
