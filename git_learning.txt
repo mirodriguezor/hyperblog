@@ -1,11 +1,13 @@
-----------------------------------------------------INFORMACION GENERAL DE GIT ----------------------------------------------------
+!!----------------------------------------------------INFORMACION GENERAL DE GIT ----------------------------------------------------!!
 Cuando se ejectura el coman "git init" en un directorio suceden varias cosas
 	1. Se crea el espacio STAGING, es un area que funciona en memoria RAM y es donde se van almacenando los cambios. Cuando se
 		ejectuta el comando "git add ." los cambios quedan en el Staging.
 	2. Se crea el REPOSITORIO, es la carpeta .git
 
 
----------------------------------------------------- COMANDOS LINUX ----------------------------------------------------
+
+
+!!---------------------------------------------------- COMANDOS LINUX ----------------------------------------------------!!
 
 
 history --- Para ver el registro de comandos realizados en la consola
@@ -16,7 +18,9 @@ history --- Para ver el registro de comandos realizados en la consola
 
 
 
----------------------------------------------------- COMANDOS GIT ----------------------------------------------------
+
+
+!!---------------------------------------------------- COMANDOS GIT ----------------------------------------------------!!
 NOTA IMPORTANTE:
 ( Se utiliza guion "-" para letras y doble guion "--" para palabras)
 
@@ -25,6 +29,9 @@ NOTA IMPORTANTE:
 'git config --global user.name my_name' --- Configurar el nombre de usuario de Git
 'git config --global user.email my_email' --- Configurar el email de Git
 'git config -l' --- Enlista los parametros de configuracion
+
+'git log --all --graph --decorate --oneline' --- Muestra toda la historia del proyecto desde que arrancó
+
 
 --'git add .' --- Agrega todos los cambios efectuados en el directorio actual, los deja en un limbo listos
 			para dar git commit -m "Comentario"
@@ -77,7 +84,9 @@ NOTA IMPORTANTE:
 				     directorio, quedan disponibles para seguir modificando.
 
 
-############# BRANCH ################
+
+
+!!---------------------------------------------------- BRANCH ----------------------------------------------------!!
 
 git branch -D name_branch --- Delete branch from Git
 
@@ -85,7 +94,9 @@ git merge branch_1 branch2 --- Codigo para unir la branch2 a la branch1.
 
 
 
----------------------------------------------------- SERVIDOR GITHUB ----------------------------------------------------
+
+
+!!---------------------------------------------------- SERVIDOR GITHUB ----------------------------------------------------!!
 
 Crear llave publica y privada ssh:
 	A continuacion el comando que crea la llave publica y privada necesarias para la interacion con Github:
@@ -99,3 +110,25 @@ Verificar el remote:
 
 Verificar el origin:
 	git remote -v
+
+
+!!----------------------------------------------------TAGS----------------------------------------------------!!
+
+-- 'git tag' --- Para enlistar los tags que hay, los tag son las versiones.
+
+
+-- 'git show-ref --tags' --- Para enlistar los tags con los commits relacionados.
+
+
+-- 'git tag -a nombre_tag -m "Detalle del tag"' --- Para agregar un nuevo tag
+
+
+-- 'git push origin --tags' --- Para enviar el tag creado al servidor
+
+
+-- 'git tag -d nombre_tag' --- Para eliminar un tag de forma local.
+
+
+-- 'git push origin :refs/tags/nombre_tag' --- Para borrar el tag del servidor ya que con "git tag -d" solo se borra	
+											   de forma local.
+
