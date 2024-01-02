@@ -1,3 +1,6 @@
+!!----------------------------------------------------CONCEPTOS GENERALES ----------------------------------------------------!!
+DevOps: En el equipo de programacion es el administrador del entorno de desarrollo.
+
 !!----------------------------------------------------INFORMACION GENERAL DE GIT ----------------------------------------------------!!
 Cuando se ejectura el coman "git init" en un directorio suceden varias cosas
 	1. Se crea el espacio STAGING, es un area que funciona en memoria RAM y es donde se van almacenando los cambios. Cuando se
@@ -51,6 +54,8 @@ NOTA IMPORTANTE:
 
 --'git diff code_commit1 code_commit2' --- Compara dos versiones de commit realizados en Git, para revisar cuales son los codigos
 									   de los commit se ejecuta el comando "git log".
+
+--'git diff'  --- Enlista los cambios realizados.
 
 
 --'git log --stat' --- Se verifica los commit y los cambios que se han realizado
