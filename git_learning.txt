@@ -151,11 +151,19 @@ Los tags son poco frecuentes pero se utilizan para el versionamiento de un proye
 
 
 !!!!-----------------------------------PROYECTOS OPENSOURCE----------------------------------------------------!!
+Pasos para realizar Fork y enviar pull request a repositorios publicos:
+	1. Ingresar al repositorio y darle Fork.
+	2. Ingresar en la carpeta deseada en el local y realizar git clone.
+	3. Ya con el repositorio en nuestro git y de forma local se realizan cambios,
+		se realiza el respectivo add, commit y push al repositorio clonado en nuestro git.
+	4.Desde el git se le realiza el pull request, Github identifica que es un repositorio clonado
+		y brinda la facilidad para enviar el pull request al dueño del repositorio.
 
 ----El link a continuacion tambien sirve para entender un poco sobre los pullrequest desde espectador.
 
 -- Link para entender manejo en proyecto Opensource:
 	https://platzi.com/clases/1557-git-github/19978-creando-un-fork-contribuyendo-a-un-repositorio/
+
 
 
 
