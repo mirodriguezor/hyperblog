@@ -44,6 +44,9 @@ NOTA IMPORTANTE:
 --'git commit -am "Commit detail"' --- Subir los cambios al repositorio local sin necesidad de dar git add . por aparte
 
 
+--'git commit --amend' --- Agrego cambios al ultimo commit realizado para no hacer diferentes commits. 
+						   debe realizarse git add . con anterioridad.
+
 --'git rm --cached name_file' --- Se ejecuta este comando para revetir el "git add ." ejectutado
 										 con anterioridad inidcando un archivo especifico. Luego de ejecutar		
 										 este comando si se hace commit no se va a tener en cuenta porque se saco del "git add ."
@@ -54,6 +57,9 @@ NOTA IMPORTANTE:
 
 
 --'git log --stat' --- Se verifica los commit y los cambios que se han realizado
+
+
+--'git log --oneline' ---Detalle de los commit en linea para mas claridad.
 
 
 --'git reset code_commit' --- reseteamos todo al commit seleccionado, si el commit es previo al ultimo	
@@ -84,6 +90,49 @@ NOTA IMPORTANTE:
 				     directorio, quedan disponibles para seguir modificando.
 
 
+--'git stash' --- Almacena los cambios actuales que no se les ha hecho un commit en una memoria temporal
+				  esto permite poder cambiar de rama y luego recuperar los cambios realizados.
+
+
+--'git stash pop' --- Restaura los cambios almacenados con anterioridad con el comando 'git stash'
+
+
+--'git stash list' --- Enlista los WIP almacenados (Work in progress [WIP])
+
+
+--'git stash branch name_branch' --- Almacena el stash enlistado en (git stash list) en una nueva rama.
+									   Tener en cuenta que se debe primero almacenar los cambios con git stash.
+
+
+--'git clean -f' --- Elimina los archivos que git considera que son basura.
+
+
+--'git clean --dry-run' ---Hace una simulacion de lo que git borraria si se ejecuta git clean.
+
+
+--'git cherry-pick code_commit' --- Trae los cambios del commit de una rama a la actual.
+
+
+--'git reflog' --- Historia detallada del proyecto, mas detallada que git log, se recomienda revision de este link.
+	https://platzi.com/clases/1557-git-github/19988-git-reset-y-reflog-usese-en-caso-de-emergencia/
+
+
+--'git grep -n palabra' --- Busca la palabra "palabra en los archivos locales e indica su linea en codigo.
+
+
+--'git grep -c palabra' --- Cuenta las repeticiones de "palabra"
+
+
+--'git log -S "palabra" --- Busca donde se relaciona "palabra" en los commits
+
+
+--'git blame -c nombre_archivo' --- Enlista el archivo y los cambios y quien los ha hecho.
+
+
+--'shortlog -sn --all --no-merges' --- Enlista los commits que han hecho los participantes del proyecto
+									   sin incluir merges.
+
+
 
 
 !!---------------------------------------------------- BRANCH ----------------------------------------------------!!
@@ -92,8 +141,9 @@ git branch -D name_branch --- Delete branch from Git
 
 git merge branch_1 branch2 --- Codigo para unir la branch2 a la branch1.
 
+git branch -r --- Enlista las ramas remotas del servidor.
 
-
+git branch -a --- Enlista todas las ramas, en blanco locales y en rojos del servidor.
 
 
 !!---------------------------------------------------- SERVIDOR GITHUB ----------------------------------------------------!!
@@ -110,6 +160,8 @@ Verificar el remote:
 
 Verificar el origin:
 	git remote -v
+
+
 
 
 !!----------------------------------------------------TAGS----------------------------------------------------!!
@@ -132,3 +184,49 @@ Verificar el origin:
 -- 'git push origin :refs/tags/nombre_tag' --- Para borrar el tag del servidor ya que con "git tag -d" solo se borra	
 											   de forma local.
 
+<<<<<<< Updated upstream
+=======
+
+
+!!------------------------------------COMO HACER UN PULL REQUESTS-------------------------------------!!
+1. Nos ubicamos en la rama diferente al master.
+2. Realizamos el respectivo pull para traer la informacion actualizada de la rama.
+3. Hacemos los cambios deseados, realizamos commit y push a la rama donde estamos.
+4. Abrimos la pagina de Github, le damos en pullrequest y comparamos la rama main con la que hicimos el push.
+
+
+
+
+!!!!-----------------------------------PROYECTOS OPENSOURCE----------------------------------------------------!!
+Pasos para realizar Fork y enviar pull request a repositorios publicos:
+	1. Ingresar al repositorio y darle Fork.
+	2. Ingresar en la carpeta deseada en el local y realizar git clone.
+	3. Ya con el repositorio en nuestro git y de forma local se realizan cambios,
+		se realiza el respectivo add, commit y push al repositorio clonado en nuestro git.
+	4.Desde el git se le realiza el pull request, Github identifica que es un repositorio clonado
+		y brinda la facilidad para enviar el pull request al dueño del repositorio.
+
+----El link a continuacion tambien sirve para entender un poco sobre los pullrequest desde espectador.
+
+-- Link para entender manejo en proyecto Opensource:
+	https://platzi.com/clases/1557-git-github/19978-creando-un-fork-contribuyendo-a-un-repositorio/
+
+
+
+
+
+!!!!-----------------------------------GITHUB PAGES----------------------------------------------------!!
+
+En este enlace enseña como subir el repositorio a una url publica donde se pueda visualizar.
+	https://platzi.com/clases/1557-git-github/19976-tu-sitio-web-publico-con-github-pages/
+
+
+
+
+!!!!-----------------------------------GIT REBASE---------------------------------------------------!!
+
+En este enlace enseña como hacer rebase, no es recomendado pero es buena herramienta bien utilizada.
+	https://platzi.com/clases/1557-git-github/19975-git-rebase-reorganizando-el-trabajo-realizado/
+
+
+>>>>>>> Stashed changes
