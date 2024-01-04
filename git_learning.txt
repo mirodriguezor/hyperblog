@@ -1,3 +1,11 @@
+
+!!----------------------------------------------------CONCEPTOS GENERALES ----------------------------------------------------!!
+DevOps: En el equipo de programacion es el administrador del entorno de desarrollo.
+
+Pullrequests: Es una funcionalidad especial de Github que permite la interaccion ordenada de varios
+programadores en un proyecto. El pullrequest pone el commit en staging del lado del servidor Git 
+permitiendo al DevOps revisar el codigo para su posterior aprobacion a un merge.
+
 !!----------------------------------------------------INFORMACION GENERAL DE GIT ----------------------------------------------------!!
 Cuando se ejectura el coman "git init" en un directorio suceden varias cosas
 	1. Se crea el espacio STAGING, es un area que funciona en memoria RAM y es donde se van almacenando los cambios. Cuando se
@@ -15,9 +23,6 @@ history --- Para ver el registro de comandos realizados en la consola
 !(code) --- Para ejecutar el comando registrado en history con base en el indice, ejemplo:
 	4 - mkdir comandos_linux.txt
 	Al ejecutar !4 ejecutara el comando para crear la carpeta comandos_linux.txt.
-
-
-
 
 
 !!---------------------------------------------------- COMANDOS GIT ----------------------------------------------------!!
@@ -54,6 +59,8 @@ NOTA IMPORTANTE:
 
 --'git diff code_commit1 code_commit2' --- Compara dos versiones de commit realizados en Git, para revisar cuales son los codigos
 									   de los commit se ejecuta el comando "git log".
+
+--'git diff'  --- Enlista los cambios realizados.
 
 
 --'git log --stat' --- Se verifica los commit y los cambios que se han realizado
@@ -165,6 +172,8 @@ Verificar el origin:
 
 
 !!----------------------------------------------------TAGS----------------------------------------------------!!
+Los tags son poco frecuentes pero se utilizan para el versionamiento de un proyecto.
+
 
 -- 'git tag' --- Para enlistar los tags que hay, los tag son las versiones.
 
@@ -184,8 +193,6 @@ Verificar el origin:
 -- 'git push origin :refs/tags/nombre_tag' --- Para borrar el tag del servidor ya que con "git tag -d" solo se borra	
 											   de forma local.
 
-<<<<<<< Updated upstream
-=======
 
 
 !!------------------------------------COMO HACER UN PULL REQUESTS-------------------------------------!!
@@ -213,8 +220,6 @@ Pasos para realizar Fork y enviar pull request a repositorios publicos:
 
 
 
-
-
 !!!!-----------------------------------GITHUB PAGES----------------------------------------------------!!
 
 En este enlace enseña como subir el repositorio a una url publica donde se pueda visualizar.
@@ -229,4 +234,3 @@ En este enlace enseña como hacer rebase, no es recomendado pero es buena herram
 	https://platzi.com/clases/1557-git-github/19975-git-rebase-reorganizando-el-trabajo-realizado/
 
 
->>>>>>> Stashed changes
